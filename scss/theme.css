@@ -516,13 +516,13 @@ header {
     font-weight: bold; }
 
 .post-content h4 a:before, .post-content h5 a:before, .post-content h6 a:before {
-  content: ""; }
+  content: " "; }
 
 .post-content h2, .post-content h3 {
-  font-size: 1.4em; }
+  font-size: 1.3em; }
 
 .post-content h4, .post-content h5, .post-content h6 {
-  font-size: 1.3em; }
+  font-size: 1.2em; }
 
 .post-content a {
   color: #42b983;
