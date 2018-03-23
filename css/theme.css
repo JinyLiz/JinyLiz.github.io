@@ -517,8 +517,10 @@ header {
   content: " "; }
 .post-content h2, .post-content h3 {
   font-size: 1.3em; }
-.post-content h4, .post-content h5, .post-content h6 {
+.post-content h4 {
   font-size: 1.2em; }
+.post-content h5, .post-content h6 {
+  font-size: 1.1em; }
 .post-content a {
   color: #42b983;
   word-break: break-all; }
