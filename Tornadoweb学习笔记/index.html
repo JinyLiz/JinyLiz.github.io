@@ -27,4 +27,9 @@
 <h5 id="poll机制"><a href="#poll机制" class="headerlink" title="poll机制"></a>poll机制</h5><p>为了减少CPU资源的占用率，在编写驱动函数中添加poll机制。poll（）是linux中的字符设备驱动中的一个函数，作用是把当前的文件指针挂到等待队列。</p>
 <p><strong>poll执行过程：</strong><br>1、将用户传入的pollfd数组拷贝到内核空间；<br>2、查询每个文件描述符对应设备的状态，如果该设备尚未就绪，则在该设备的等待队列中加入一项并继续查询下一设备的状态。查询完所有设备后如果没有一个设备就绪，这时则需要挂起当前进程等待，直到设备就绪或者超时，挂起操作是通过调用schedule_timeout执行的。设备就绪后进程被通知继续运行，这时再次遍历所有设备，以查找就绪设备；<br>3、将获得的数据传送到用户空间并执行释放内存和剥离等待队列等善后工作。</p>
 <p><strong>epoll：</strong><br>是linux内核为处理大批量文件描述符而改进的poll，能显著提高程序在大量并发连接中只有少量活跃的情况下的系统CPU利用率。</p>
-</div></article></div></main><footer><div class="paginator"><a class="prev" href="../python学习笔记/">prev</a><a class="next" href="../后端学习笔记/">next</a></div><div class="copyright"><p>&copy; 2018 <a href="https://jinyliz.github.io">Liz</a>.<br>Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> &amp; <a href="https://github.com/Dreyer/hexo-theme-artemis" target="_blank">Artemis</a>.</p></div></footer></div></body></html>
+<p>##其它</p>
+<p>####CSRF<br>cross-site request forgery 跨站请求伪造</p>
+</div></article></div></main><footer><div class="paginator"><a class="prev" href="../python学习笔记/">prev</a><a class="next" href="../后端学习笔记/">next</a></div><div class="copyright"><p>&copy; 2018 <a href="https://jinyliz.github.io">Liz</a>.<br>Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> &amp; <a href="https://github.com/Dreyer/hexo-theme-artemis" target="_blank">Artemis</a>.</p></div></footer></div><script type="text/javascript" id="maid-script" src="https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js?v=undefined"></script><script>if (window.mermaid) {
+  var options = JSON.parse(document.getElementById('maid-script').getAttribute('mermaidoptioins'));
+  mermaid.initialize(options);
+}</script></body></html>
